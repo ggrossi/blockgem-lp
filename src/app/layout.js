@@ -1,7 +1,4 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +8,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans" style={{ fontFamily: 'League Spartan' }}>
+        {children}
+      </body>
     </html>
   )
 }
