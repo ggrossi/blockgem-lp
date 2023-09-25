@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Blockgem - Unlock the Power of Crypto Arbitrage',
   description: 'Calling all beta testers! Telegram bot covering over 100+ crypto assets and providing real-time prices from 75+ DEXes and CEXes. Elevate your trading experience with our exclusive, user-friendly features.',
   url: 'https://blockgem.co',
-  image: 'https://blockgem.co/og.png', // Replace with the URL of your Open Graph image
+  image: '/og.png', // Replace with the URL of your Open Graph image
 }
 
 export default function RootLayout({ children }) {
@@ -13,6 +13,8 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <link rel="canonical" href={metadata.url} />
+        <meta name="robots" content="index, follow" />
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap"
           rel="stylesheet"
