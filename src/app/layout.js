@@ -1,10 +1,11 @@
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 
 export const metadata = {
   title: 'Blockgem - Unlock the Power of Crypto Arbitrage',
   description: 'Calling all beta testers! Telegram bot covering over 100+ crypto assets and providing real-time prices from 75+ DEXes and CEXes. Elevate your trading experience with our exclusive, user-friendly features.',
   url: 'https://blockgem.co',
-  image: '/og.png', // Replace with the URL of your Open Graph image
+  image: 'https://blockgem.co/og.png',
 }
 
 export default function RootLayout({ children }) {
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-sans" style={{ fontFamily: 'League Spartan' }}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
