@@ -1,7 +1,7 @@
 // subscribeUser.js
 import fetch from 'isomorphic-unfetch';
 
-export default async (req, res) => {
+const subscribeUser = async (req, res) => {
   console.log('Request body:', req.body); // Log the request body
   
   const { email } = req.body;
@@ -50,3 +50,5 @@ export default async (req, res) => {
     return res.status(500).json({ error: 'Something went wrong, please try again later.' });
   }
 };
+
+export default subscribeUser;

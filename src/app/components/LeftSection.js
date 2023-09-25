@@ -21,6 +21,14 @@ function LeftSection() {
       
       if (res.status === 200) {
         setErrorMessage(''); // Clear any previous error messages
+        
+        // Insert Twitter conversion tracking event code before redirecting
+        if (window.twq) {
+          window.twq('event', 'tw-ofnig-ogmul', {
+            email_address: email // use this to pass a user’s email address
+          });
+        }
+        
         window.location.href = redirectUrl; // Redirect to the respective Telegram link
       } else {
         const data = await res.json();
